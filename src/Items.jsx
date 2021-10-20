@@ -10,10 +10,10 @@ export default function Items(props) {
 
   let listaFiltrada = props.items;
 
-  if (inputState.lenght > 0) {
+  if (inputState.length > 0) {
     // eslint-disable-next-line array-callback-return
     listaFiltrada = props.items.filter((i) => {
-      if (i.value.toUpperCase().includes(inputState.toLocaleUpperCase())) {
+      if (i.value.toUpperCase().includes(inputState.toUpperCase())) {
         return true;
       }
     });
@@ -27,7 +27,7 @@ export default function Items(props) {
       </h1>
       <input
         className="input-items"
-        onchange={manejadorInput}
+        onChange={manejadorInput}
         type="text"
         value={inputState}
         placeholder="buscar"

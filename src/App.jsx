@@ -24,6 +24,7 @@ function App() {
     };
     let nuevaLista = [...lista, nuevoItem];
     setLista(nuevaLista);
+    setState("");
   };
 
   const handleButton = () => {
