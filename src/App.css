@@ -1,14 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
 .App {
   display:flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -16,11 +15,55 @@
 .Container {
   display:flex;
   flex-direction: column;
-  width:500px;
-  height:500px;
-  border: 2px solid black;
-  border-radius: 5px;
+  width:600px;
+  height:800px;
+  border: 1px solid black;
+  border-radius: 10px;
   padding:30px;
   margin-top: 60px;
 }
 
+.formTop {
+  display:flex;
+  justify-content: center;
+}
+
+.input-top {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50px;
+  border: #209E97 1px solid;
+  outline-style: none;
+  color:#444444;
+}
+
+.submit-top {
+  padding: 5px;
+  margin: 5px;
+  background-color:#209E97 ;
+  color:white;
+  /* font-weight: bold; */
+  border: #209E97 1px solid;
+  border-radius: 50px;
+  box-shadow: 5px 1px 6px -3px rgba(0,0,0,0.59);
+  font-family: 'Inconsolata', monospace;
+
+}
+
+.ItemsTitle {
+  font-size: 28px;
+  color:#444444;
+  font-family: 'Inconsolata', monospace;
+  padding:10px;
+  margin:10px;
+
+}
+
+.input-items {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  border: #209E97 1px solid;
+  outline-style: none;
+  color:#444444;
+}
