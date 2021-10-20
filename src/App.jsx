@@ -3,6 +3,7 @@ import "./App.css";
 import { defaultState } from "./products.js";
 import { ObtenerItemsPorCategoria } from "./utils.js";
 import Items from "./Items";
+import uniqueId from "lodash/uniqueId";
 import Jetsetter from "./svg/Jetsetter.svg";
 
 function App() {
@@ -15,7 +16,24 @@ function App() {
   };
 
   const manejadorSubmit = (e) => {
-    return console.log(e.target.value);
+    e.preventDefault();
+    let nuevoItem = {
+      value: state,
+      id: uniqueId(),
+      packed: false,
+    };
+    let nuevaLista = [...lista, nuevoItem];
+    setLista(nuevaLista);
+  };
+
+  const handleButton = () => {
+    let listaTodoDesempacado = lista.map((item) => {
+      return {
+        ...item,
+        packed: false,
+      };
+    });
+    setLista(listaTodoDesempacado);
   };
 
   const listaDesempacados = ObtenerItemsPorCategoria(lista, "packed", false);
@@ -54,7 +72,7 @@ function App() {
           setLista={setLista}
         />
         <div>
-          <button> Marcar todo desempacado </button>
+          <button onClick={handleButton}> Marcar todo desempacado </button>
         </div>
       </div>
     </div>
