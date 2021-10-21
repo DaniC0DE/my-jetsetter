@@ -21,17 +21,19 @@ export default function Items(props) {
 
   return (
     <div className="ItemsContainer">
-      <h1 className="ItemsTitle">
-        {props.title}
-        {props.items.lenght}{" "}
-      </h1>
-      <input
-        className="input-items"
-        onChange={manejadorInput}
-        type="text"
-        value={inputState}
-        placeholder="buscar"
-      />
+      <div className="title-searchbar-container">
+        <h1 className="ItemsTitle">
+          {props.title}
+          {props.items.lenght}{" "}
+        </h1>
+        <input
+          className="input-items"
+          onChange={manejadorInput}
+          type="text"
+          value={inputState}
+          placeholder="buscar..."
+        />
+      </div>
       {listaFiltrada.map((item) => {
         return (
           <Item

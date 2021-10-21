@@ -42,8 +42,10 @@ function App() {
 
   return (
     <div className="App">
-      <img height="250px" width="300px" src={Jetsetter} alt="Logo" />
       <div className="Container">
+        <div className="Logo">
+          <img height="120px" src={Jetsetter} alt="Logo" />
+        </div>
         <form className="formTop">
           <label>
             <input
@@ -51,6 +53,7 @@ function App() {
               onChange={manejadorAgregarItem}
               type="text"
               value={state}
+              placeholder="introduzca item"
             />
           </label>
           <input
@@ -72,8 +75,10 @@ function App() {
           lista={lista}
           setLista={setLista}
         />
-        <div>
-          <button onClick={handleButton}> Marcar todo desempacado </button>
+        <div className="contenedor-btn">
+          <button className="uncheck-btn" onClick={handleButton}>
+            Marcar todo desempacado
+          </button>
         </div>
       </div>
     </div>

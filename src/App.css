@@ -4,20 +4,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .App {
   display:flex;
   justify-content: center;
   align-items: center;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='43.1' stroke-opacity='0.11' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg transform='scale(0.82)' style='transform-origin:center'%3E%3Cg transform='rotate(25.2 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-160 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23000' href='%23a' transform='rotate(10 0 0) scale(1.1)'/%3E%3Cuse stroke='%23000011' href='%23a' transform='rotate(20 0 0) scale(1.2)'/%3E%3Cuse stroke='%23000022' href='%23a' transform='rotate(30 0 0) scale(1.3)'/%3E%3Cuse stroke='%23000033' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%23000044' href='%23a' transform='rotate(50 0 0) scale(1.5)'/%3E%3Cuse stroke='%23000055' href='%23a' transform='rotate(60 0 0) scale(1.6)'/%3E%3Cuse stroke='%23000066' href='%23a' transform='rotate(70 0 0) scale(1.7)'/%3E%3Cuse stroke='%23000077' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3Cuse stroke='%23000088' href='%23a' transform='rotate(90 0 0) scale(1.9)'/%3E%3Cuse stroke='%23000099' href='%23a' transform='rotate(100 0 0) scale(2)'/%3E%3Cuse stroke='%230000aa' href='%23a' transform='rotate(110 0 0) scale(2.1)'/%3E%3Cuse stroke='%230000bb' href='%23a' transform='rotate(120 0 0) scale(2.2)'/%3E%3Cuse stroke='%230000cc' href='%23a' transform='rotate(130 0 0) scale(2.3)'/%3E%3Cuse stroke='%230000dd' href='%23a' transform='rotate(140 0 0) scale(2.4)'/%3E%3Cuse stroke='%230000ee' href='%23a' transform='rotate(150 0 0) scale(2.5)'/%3E%3Cuse stroke='%2300F' href='%23a' transform='rotate(160 0 0) scale(2.6)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.Logo {
+  display:flex;
+  justify-content:center;
+
 }
 
 .Container {
+  background-color:white;
   display:flex;
   flex-direction: column;
   width:600px;
-  height:800px;
-  border: 1px solid black;
+  height:100%;
+  border: #04043D 1px solid;
   border-radius: 10px;
   padding:30px;
   margin-top: 60px;
@@ -31,22 +42,33 @@
 .input-top {
   padding: 10px;
   margin: 5px;
+  padding-left: 25px;
   border-radius: 50px;
-  border: #209E97 1px solid;
+  border: #04043D 1px solid;
   outline-style: none;
   color:#444444;
 }
 
 .submit-top {
   padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 5px;
-  background-color:#209E97 ;
+  background-color:#04043D ;
   color:white;
   /* font-weight: bold; */
-  border: #209E97 1px solid;
+  border: #04043D 1px solid;
   border-radius: 50px;
   box-shadow: 5px 1px 6px -3px rgba(0,0,0,0.59);
   font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+
+}
+
+.title-searchbar-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -60,10 +82,71 @@
 }
 
 .input-items {
+  height: 35px;
   padding: 10px;
+  padding-left: 25px;
   margin: 10px;
-  border-radius: 50px;
-  border: #209E97 1px solid;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: #04043D 1px solid;
   outline-style: none;
   color:#444444;
 }
+
+.Item {
+  display:flex;
+  justify-content: flex-start;
+  align-content: center;
+  text-align:center;
+  padding:5px;
+  margin:5px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin-left: 20px;
+  margin-right:10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.titleItem {
+  color:#444444;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.removebutton {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  padding:5px;
+  cursor: pointer;
+  background-color:none;
+  border-style: none;
+  border-radius: 50%;
+}
+
+.contenedor-btn {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100%;
+}
+
+.uncheck-btn {
+  padding: 15px;
+  margin: 5px;
+  background-color:#04043D ;
+  color:white;
+  border: #04043D 1px solid;
+  border-radius: 50px;
+  box-shadow: 5px 1px 6px -3px rgba(0,0,0,0.59);
+  font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+}
+
